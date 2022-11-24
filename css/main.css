@@ -1,4 +1,8 @@
 @import url(../assets/fonts/avenir.css);
+* {
+  padding: 0;
+  margin: 0; }
+
 body {
   font-weight: 400;
   background-color: #333; }
@@ -9,13 +13,17 @@ body {
   z-index: 999;
   display: flex;
   justify-content: space-between;
+  padding-top: 1.5rem;
   width: 100%; }
   .header h2 {
     font-size: 2.4rem;
     font-weight: 700;
-    font-family: 'Avenir LT Std', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     padding-left: 2.5rem;
-    transition: all 250ms; }
+    transition: all 250ms;
+    z-index: 1000; }
+  .header h2.active {
+    color: #333; }
   .header .hamburger-container {
     display: flex;
     align-items: center;
@@ -76,6 +84,9 @@ body {
     top: 0;
     transition: height 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
     background-color: #fff; }
+  .nav ul li {
+    list-style-type: none;
+    font-family: 'Open Sans', sans-serif; }
   .nav.active .nav__background {
     height: 100%; }
   .nav.active ul li.active {
@@ -96,7 +107,7 @@ body {
         color: #161616;
         text-decoration: none; }
     .nav ul li:hover {
-      text-decoration: strikethrough; }
+      text-decoration: underline; }
 
 .section p {
   font-family: 'Open Sans'; }
@@ -112,6 +123,11 @@ body {
 
 #home {
   background-color: #4831d4; }
+  #home ul {
+    padding-left: 2rem; }
+    #home ul li {
+      color: #fff;
+      font-family: 'Open Sans', sans-serif; }
   #home .custom-background {
     height: 100vh;
     width: 30vw;
@@ -171,8 +187,6 @@ body {
     border-radius: 10px;
     transition: all 250ms;
     color: #4831d4; }
-    #about .about__box:hover {
-      background-color: #ccf381; }
     #about .about__box h3 {
       font-size: 2.4rem;
       padding: 0;
@@ -183,8 +197,102 @@ body {
     #about .about__box p {
       font-size: 1.6rem;
       line-height: 1.5; }
+    #about .about__box img {
+      width: 100%; }
+    #about .about__box h4 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      font-family: 'Avenir LT Std', sans-serif; }
+    #about .about__box .stack {
+      background-color: rgba(238, 238, 238, 0.4);
+      padding: 1rem;
+      margin: 1.5rem 0; }
+    #about .about__box .stack__name {
+      display: flex;
+      align-items: center; }
+      #about .about__box .stack__name h4 {
+        margin-right: 1rem; }
+      #about .about__box .stack__name svg {
+        width: 32px;
+        height: 32px;
+        margin-right: 0.5rem; }
+  #about .stack__loader .animated-progress {
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 20px 10px;
+    overflow: hidden;
+    position: relative; }
+  #about .stack__loader .animated-progress span {
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    display: block;
+    width: 50%;
+    color: #fffbfb;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    padding-right: 5px; }
+  #about .stack__loader .progress-blue span {
+    background-color: #4831d4; }
   #about h2 {
     color: #4831d4; }
   #about .language svg {
     width: 128px;
     height: 128px; }
+
+#about-two {
+  background-color: #ccf381; }
+  #about-two h2 {
+    text-align: center;
+    padding-bottom: 2rem;
+    padding-top: 0; }
+  #about-two .section-container {
+    color: #4631d3;
+    height: 90vh;
+    padding: 1rem 2rem;
+    overflow: hidden; }
+  #about-two .contact-wrapper {
+    padding: 1rem 2rem;
+    display: flex;
+    height: 95%;
+    background-color: #fff;
+    overflow: hidden; }
+    #about-two .contact-wrapper form {
+      flex: 1;
+      font-family: 'Open Sans', sans-serif; }
+    #about-two .contact-wrapper form input {
+      width: 80%;
+      padding: 1rem;
+      border: 1px solid #4831d4;
+      border-radius: 5px;
+      margin-bottom: 1rem; }
+    #about-two .contact-wrapper form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #333; }
+    #about-two .contact-wrapper form textarea {
+      width: 80%;
+      padding: 1rem;
+      border: 1px solid #4831d4;
+      border-radius: 5px;
+      margin-bottom: 1rem; }
+    #about-two .contact-wrapper form button {
+      background-color: #4831d4;
+      color: #fff;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 250ms;
+      font-family: 'Open Sans', sans-serif; }
+      #about-two .contact-wrapper form button:hover {
+        background-color: #ccf381;
+        color: #4831d4; }
+    #about-two .contact-wrapper .icons {
+      margin-top: 1rem; }
+      #about-two .contact-wrapper .icons svg {
+        height: 32px;
+        width: 32px; }
+    #about-two .contact-wrapper .location {
+      flex: 1; }

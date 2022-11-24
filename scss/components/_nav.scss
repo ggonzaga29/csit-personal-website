@@ -17,6 +17,11 @@
 		background-color: $color-primary;
 	}
 
+	ul li {
+		list-style-type: none;
+		font-family: 'Open Sans', sans-serif;
+	}
+
 	&.active {
 		& .nav__background {
 			height: 100%;
@@ -50,7 +55,7 @@
 		}
 
 		& li:hover {
-			text-decoration: strikethrough;
+			text-decoration: underline;
 		}
 	}
 }

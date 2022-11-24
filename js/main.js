@@ -5,6 +5,8 @@ new fullpage('#fullPage', {
 
 document.querySelector('.fp-watermark').remove();
 
+const header = document.querySelector('.header');
+const logo = document.querySelector('.logo');
 const hamburgerIcon = document.querySelector('.hamburger');
 const nav = document.querySelector('.nav');
 const navLinks = document.querySelectorAll('.nav li');
@@ -62,6 +64,7 @@ function toggleMenu() {
 	nav.classList.toggle('active');
 	hamburgerIcon.classList.toggle('active');
 	animateNavLinks();
+	logo.classList.toggle('active');
 }
 
 hamburgerIcon.addEventListener('click', () => {
@@ -73,6 +76,12 @@ navLinks.forEach((li) => {
 		toggleMenu();
 
 		const section = document.querySelector(li.dataset.section);
+		
+		if(li.dataset.section.slice(1) === 's1') {
+			remove();
+		} else {
+			add();
+		}
 
 		setTimeout(() => {
 			section.scrollIntoView({
@@ -143,9 +152,6 @@ function clearLetters(str) {
 
 // });
 
-const header = document.querySelector('.header');
-const logo = document.querySelector('.logo');
-
 function add() {
 	setTimeout(() => {
 		header.classList.add('header-s2');
@@ -171,3 +177,12 @@ setInterval(() => {
 function getCurrentSection() {
 	return fullpage_api.getActiveSection().item.classList;
 }
+
+const loaderSpans = document.querySelectorAll(
+	'.animated-progress span'
+);
+
+loaderSpans.forEach((span) => {
+	span.style.width = `${span.dataset.progress}%`;
+	span.textContent = span.dataset.progress + '%';
+});
