@@ -1,0 +1,190 @@
+@import url(../assets/fonts/avenir.css);
+body {
+  font-weight: 400;
+  background-color: #333; }
+
+.header {
+  color: #fff;
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+  .header h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    font-family: 'Avenir LT Std', sans-serif;
+    padding-left: 2.5rem;
+    transition: all 250ms; }
+  .header .hamburger-container {
+    display: flex;
+    align-items: center;
+    justify-items: center; }
+
+.header-s2 {
+  color: #4831d4; }
+  .header-s2 .hamburger span {
+    background-color: #4831d4 !important; }
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  width: 70px;
+  cursor: pointer;
+  margin-right: 3.5rem;
+  margin-top: 0.5rem;
+  z-index: 999; }
+  .hamburger span {
+    background: #fff;
+    border-radius: 999px;
+    height: 4px;
+    margin: 7px 0;
+    transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    backface-visibility: hidden; }
+  .hamburger span:nth-of-type(1) {
+    width: 50%; }
+  .hamburger span:nth-of-type(2) {
+    width: 100%; }
+  .hamburger span:nth-of-type(3) {
+    width: 75%; }
+  .hamburger.active span {
+    background: #161616; }
+  .hamburger.active span:nth-of-type(1) {
+    transform-origin: bottom;
+    transform: rotatez(45deg) translate(8px, 0px); }
+  .hamburger.active span:nth-of-type(2) {
+    transform-origin: top;
+    transform: rotatez(-45deg) translateY(2px); }
+  .hamburger.active span:nth-of-type(3) {
+    transform-origin: bottom;
+    width: 50%;
+    transform: translate(30px, -4px) rotatez(45deg); }
+
+.nav {
+  z-index: 998;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  color: #161616; }
+  .nav__background {
+    width: 100%;
+    height: 0;
+    position: fixed;
+    top: 0;
+    transition: height 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    background-color: #fff; }
+  .nav.active .nav__background {
+    height: 100%; }
+  .nav.active ul li.active {
+    opacity: 1;
+    transform: translate(0, 0); }
+  .nav ul {
+    text-align: center;
+    z-index: 1; }
+    .nav ul li {
+      opacity: 0;
+      transform: translate(0, 50px);
+      font-size: 3rem;
+      line-height: 1.5;
+      transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+      cursor: pointer;
+      text-transform: uppercase; }
+      .nav ul li a {
+        color: #161616;
+        text-decoration: none; }
+    .nav ul li:hover {
+      text-decoration: strikethrough; }
+
+.section p {
+  font-family: 'Open Sans'; }
+
+.section h2 {
+  font-family: 'Avenir LT Std', sans-serif;
+  font-size: 4.8rem;
+  font-weight: 700; }
+
+.section-container {
+  max-width: 1140px;
+  margin: 0 auto; }
+
+#home {
+  background-color: #4831d4; }
+  #home .custom-background {
+    height: 100vh;
+    width: 30vw;
+    background-color: #ccf381;
+    position: absolute;
+    top: 0;
+    right: 0; }
+  #home h2 {
+    color: #ccf381;
+    margin-bottom: 2rem; }
+  #home p {
+    color: #fff;
+    width: 75ch;
+    line-height: 1.5; }
+  #home .home__container {
+    display: flex;
+    height: 100vh;
+    align-items: center; }
+  #home .home__image {
+    position: relative;
+    z-index: 999;
+    width: 100%;
+    height: 100%; }
+    #home .home__image img {
+      height: 300px;
+      width: 269px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); }
+    #home .home__image .img__border {
+      width: 300px;
+      height: 269px;
+      border: 4px solid #fff;
+      position: absolute;
+      left: 60%;
+      top: 60%;
+      transform: translate(-50%, -50%); }
+
+#about {
+  background-color: #fff;
+  overflow-y: hidden; }
+  #about .section-container {
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 0;
+    height: calc(75vh); }
+  #about .about__grid {
+    display: flex;
+    width: 100%;
+    flex: 1; }
+  #about .about__box {
+    flex: 1;
+    gap: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    transition: all 250ms;
+    color: #4831d4; }
+    #about .about__box:hover {
+      background-color: #ccf381; }
+    #about .about__box h3 {
+      font-size: 2.4rem;
+      padding: 0;
+      margin: 0;
+      font-weight: 700;
+      font-family: 'Avenir LT Std', sans-serif;
+      margin-bottom: 1rem; }
+    #about .about__box p {
+      font-size: 1.6rem;
+      line-height: 1.5; }
+  #about h2 {
+    color: #4831d4; }
+  #about .language svg {
+    width: 128px;
+    height: 128px; }

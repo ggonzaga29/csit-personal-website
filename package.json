@@ -1,0 +1,16 @@
+{
+	"name": "personal-website-full",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"watch:sass": "node-sass -w scss/main.scss css/main.css",
+		"compile:sass": "node-sass scss/main.scss css/main.css"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"node-sass": "^8.0.0"
+	}
+}

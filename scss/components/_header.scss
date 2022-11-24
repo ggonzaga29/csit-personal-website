@@ -1,0 +1,33 @@
+.header {
+	color: #fff;
+	position: fixed;
+	z-index: 999;
+	display: flex;
+	justify-content: space-between;
+	// padding: 0rem 2rem;
+	width: 100%;
+
+
+
+	& h2 {
+		font-size: 2.4rem;
+		font-weight: 700;
+		font-family: 'Avenir LT Std', sans-serif;
+		padding-left: 2.5rem;
+		transition: all 250ms;
+	}
+
+	& .hamburger-container {
+		display: flex;
+		align-items: center;
+		justify-items: center;
+	}
+}
+
+.header-s2 {
+	color: #4831d4;
+
+	& .hamburger span {
+		background-color: #4831d4 !important;
+	}
+}
